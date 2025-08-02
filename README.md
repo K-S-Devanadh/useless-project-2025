@@ -8,14 +8,13 @@
 ### Team Name: Debuggers Anonymous
 
 ### Team Members
-- Team Lead: K S Devanadh - ABC College of Engineering
-- Member 2: Alex Byte - XYZ Institute of Tech
-- Member 3: Jamie Code - PQR Polytechnic
+- Team Lead: K S Devanadh - ASIET
+- Member 2: Rohini Santhosh - ASIET
 
 ---
 
 ### 📝 Project Description
-A digital-only fan that gets faster every time you click it. That’s it. It spins faster. The future is now.
+password game
 
 ---
 
@@ -63,23 +62,19 @@ open index.html
 
 ## 📷 Project Documentation
 
-### Screenshots (At least 3)
-
-![Screenshot1](https://example.com/screenshot1.png)
+### Screenshots 
+https://drive.google.com/drive/folders/1SAadeKN_PH47XL7jCBS07ik8eheZZNaz
 *Caption: The fan in its idle state.*
 
-![Screenshot2](https://example.com/screenshot2.png)
 *Caption: After 100 clicks, fan speed = danger.*
 
-![Screenshot3](https://example.com/screenshot3.png)
-*Caption: UI breakdown showing speedometer.*
+*Caption: UI breakdown showing speedometer.*](https://drive.google.com/drive/folders/1SAadeKN_PH47XL7jCBS07ik8eheZZNaz)
 
 ---
 
 ### Diagrams
 
-![Workflow](https://example.com/workflow.png)
-*Caption: User clicks → Speed increases → Animation updates*
+none needed
 
 ---
 
@@ -87,23 +82,18 @@ open index.html
 
 #### 🔌 Circuit & Schematic
 
-![Circuit](https://example.com/virtual-circuit.png)
 *Caption: It's just HTML. But here's a fake circuit.*
 
-![Schematic](https://example.com/virtual-schematic.png)
 *Caption: Totally unnecessary wiring.*
 
 ---
 
 #### 🔧 Build Photos
 
-![Components](https://example.com/components.png)
 *Caption: Our laptops and snacks.*
 
-![Build](https://example.com/build.png)
 *Caption: Work in progress chaos.*
 
-![Final](https://example.com/final.png)
 *Caption: Final fan masterpiece on the screen.*
 
 ---
@@ -131,3 +121,4 @@ Made with ❤️ at **TinkerHub Useless Projects**
 
 ![TinkerHub Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
 ![Useless Projects Badge](https://img.shields.io/badge/UselessProjects--25-25?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)
+

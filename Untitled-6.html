@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Password Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    .rule {
+      font-size: 18px;
+      padding: 15px;
+      background: #fff;
+      border-left: 6px solid red;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .rule.pass {
+      border-left-color: green;
+      background: #e0ffe0;
+    }
+    .done-rules {
+      margin-top: 20px;
+    }
+    .done-rules li {
+      list-style: "✅ ";
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🧠 The Password Game</h1>
+<input type="text" id="password" placeholder="Type your chaotic password..." />
+<div class="rule" id="current-rule">Loading rule...</div>
+<ul class="done-rules" id="done-list"></ul>
+
+<script>
+const rules = [
+  {
+    text: "Must be at least 8 characters",
+    test: pw => pw.length >= 8
+  },
+  {
+    text: "Must include a number",
+    test: pw => /\d/.test(pw)
+  },
+  {
+    text: "Must include a capital letter",
+    test: pw => /[A-Z]/.test(pw)
+  },
+  {
+    text: "Must include the word 'banana'",
+    test: pw => pw.toLowerCase().includes("banana")
+  },
+  {
+    text: "Must contain a palindrome (e.g., wow)",
+    test: pw => {
+      for (let i = 0; i < pw.length; i++) {
+        for (let j = i + 3; j <= pw.length; j++) {
+          let sub = pw.slice(i, j);
+          if (sub === sub.split('').reverse().join('')) return true;
+        }
+      }
+      return false;
+    }
+  },
+  {
+    text: "Must contain the Roman numeral for 69 (LXIX)",
+    test: pw => pw.toUpperCase().includes("LXIX")
+  },
+  {
+    text: "Must include the year 2025",
+    test: pw => pw.includes("2025")
+  },
+  {
+    text: "Must include an emoji (e.g., 🤡)",
+    test: pw => /[\uD800-\uDBFF][\uDC00-\uDFFF]/.test(pw)
+  },
+  {
+    text: "Must include the word 'mulleri'",
+    test: pw => pw.toLowerCase().includes("mulleri")
+  },
+  {
+    text: "Must include the name of a Pokémon (e.g., 'pikachu')",
+    test: pw => /pikachu|charmander|bulbasaur|squirtle|eevee/i.test(pw)
+  },
+  {
+    text: "Must contain all 5 vowels (a, e, i, o, u)",
+    test: pw => /a/i.test(pw) && /e/i.test(pw) && /i/i.test(pw) && /o/i.test(pw) && /u/i.test(pw)
+  },
+  {
+    text: "Must include a prime number (2, 3, 5, ..., 29)",
+    test: pw => /(2|3|5|7|11|13|17|19|23|29)/.test(pw)
+  },
+  {
+    text: "Must contain a valid date format (e.g., 31/12/2025)",
+    test: pw => /\b(0?[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[0-2])\/20[2-9][0-9]\b/.test(pw)
+  }
+];
+
+let currentRuleIndex = 0;
+const input = document.getElementById("password");
+const ruleDiv = document.getElementById("current-rule");
+const doneList = document.getElementById("done-list");
+
+function updateRuleDisplay() {
+  if (currentRuleIndex >= rules.length) {
+    ruleDiv.innerHTML = "🎉 All rules passed! You're a password god!";
+    ruleDiv.classList.add("pass");
+    return;
+  }
+
+  ruleDiv.innerHTML = rules[currentRuleIndex].text;
+  ruleDiv.classList.remove("pass");
+}
+
+function checkCurrentRule(pw) {
+  while (currentRuleIndex < rules.length && rules[currentRuleIndex].test(pw)) {
+    const li = document.createElement("li");
+    li.textContent = rules[currentRuleIndex].text;
+    doneList.appendChild(li);
+    ruleDiv.classList.add("pass");
+    currentRuleIndex++;
+  }
+  updateRuleDisplay();
+}
+
+input.addEventListener("input", () => {
+  const pw = input.value;
+  checkCurrentRule(pw);
+});
+
+updateRuleDisplay();
+</script>
+
+</body>
+</html>

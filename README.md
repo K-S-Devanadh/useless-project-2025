@@ -18,13 +18,8 @@ password game
 
 ---
 
-### ❓ The Problem (that doesn't exist)
-What if your fan doesn’t listen to your feelings? What if you just want to keep clicking until something happens?
-
----
-
 ### 💡 The Solution (that nobody asked for)
-We made a web fan that spins faster every time you click. It even overheats (visually). The satisfaction is immeasurable.
+We made a web password game
 
 ---
 
@@ -121,4 +116,5 @@ Made with ❤️ at **TinkerHub Useless Projects**
 
 ![TinkerHub Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
 ![Useless Projects Badge](https://img.shields.io/badge/UselessProjects--25-25?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)
+
 
